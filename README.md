@@ -1,3 +1,3 @@
 # ecomercedjango
 
-https://djangoecomerce1.herokuapp.com/
+https://djshop1.herokuapp.com/
