@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'f^=5pd1lso=1zxm*da!r$=@%o937%zv+4n7pvtgkoiuk3tkps('
-SECRET_KEY = config('SECRET_KEY')
+#SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG',default=True,cast=bool)
@@ -93,7 +93,7 @@ DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/tmp/mysite.sqlite3',
+        'NAME': str(BASE_DIR / 'db.sqlite3'),
     }
 }
 
@@ -150,15 +150,15 @@ from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
-ALLOWED_HOSTS=['*']
-CROS_ORIGIN_ALLOW_ALL = True
+
+"""CROS_ORIGIN_ALLOW_ALL = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # SMTP configuration
 EMAIL_HOST = config('EMAIL_HOST')
 EMAIL_PORT = config('EMAIL_PORT', cast=int)
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
+EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)"""
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
