@@ -28,7 +28,7 @@ SECRET_KEY = 'f^=5pd1lso=1zxm*da!r$=@%o937%zv+4n7pvtgkoiuk3tkps('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG',default=True,cast=bool)
 #
-ALLOWED_HOSTS = ['django-ob8p.onrender.com']
+ALLOWED_HOSTS = ['web-production-7c8d.up.railway.app']
 
 
 # Application definition
